@@ -4,10 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 class ItemTest {
     @Test
-    public void differentObjectsWithIdenticalCodeMustBeEquals(){
+    public void differentObjectsWithIdenticalCodeMustBeEquals() {
         //given
         Item first = new Item("A", 1.5, 0, 0.0);
         Item second = new Item("A", 4.5, 3, 12.0);
@@ -18,7 +20,7 @@ class ItemTest {
     }
 
     @Test
-    public void itemMustCorrectlyCastToString(){
+    public void itemMustCorrectlyCastToString() {
         //given
         Item argument = new Item("A", 1.5, 0, 0.0);
         //when

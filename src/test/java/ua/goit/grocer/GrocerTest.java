@@ -6,7 +6,8 @@ import org.junit.jupiter.api.function.Executable;
 import java.util.MissingResourceException;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class GrocerTest {
     private final Repository repository = code -> switch (code) {
@@ -28,6 +29,7 @@ class GrocerTest {
         //then
         assertEquals(0, result);
     }
+
     @Test
     public void grocerMustTrowNullPointerExceptionForNullOrder() {
         //given
