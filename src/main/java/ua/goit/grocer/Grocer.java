@@ -20,9 +20,7 @@ public class Grocer {
                 .collect(Collectors.groupingBy(String::toString, Collectors.counting()))
                 .entrySet()) {
             Item key = repository.getItem(e.getKey()).orElseThrow(() -> new MissingResourceException("In repository don`t present item", repository.getClass().getName(), e.getKey()));
-            if (map.put(key, e.getValue()) != null) {
-                throw new IllegalStateException("Duplicate key");
-            }
+            map.put(key, e.getValue());
         }
         totalPrice = map
                 .entrySet().stream()

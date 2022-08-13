@@ -19,7 +19,7 @@ public record Item(String code, double price, int promotionCount, double promoti
 
     @Override
     public String toString() {
-        return "ItemInBd{" +
+        return "Item{" +
                 "code='" + code + '\'' +
                 ", price=" + price +
                 ", promotionPrice=" + promotionPrice +

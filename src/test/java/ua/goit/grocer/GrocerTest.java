@@ -20,7 +20,7 @@ class GrocerTest {
     private final Grocer grocer = new Grocer(repository);
 
     @Test
-    public void GrocerShouldReturnZeroForEmptyString() {
+    public void grocerShouldReturnZeroForEmptyString() {
         //given
         String arguments = "";
         //when
@@ -30,7 +30,7 @@ class GrocerTest {
     }
 
     @Test
-    public void GrocerShouldReturnCorrectValueForOneItemInOrder() {
+    public void grocerShouldReturnCorrectValueForOneItemInOrder() {
         //given
         String arguments = "A";
         //when
@@ -40,7 +40,7 @@ class GrocerTest {
     }
 
     @Test
-    public void GrocerShouldTrowMissingResourceExceptionWithItemMissileInDatabase() {
+    public void grocerShouldTrowMissingResourceExceptionWithItemMissileInDatabase() {
         //given
         String arguments = "AE";
         //when
@@ -50,7 +50,7 @@ class GrocerTest {
     }
 
     @Test
-    public void GrocerShouldReturnCorrectValueForPromotionalCountOfItemPlusOneInOrder() {
+    public void grocerShouldReturnCorrectValueForPromotionalCountOfItemPlusOneInOrder() {
         //given
         String arguments = "AAAA";
         //when
@@ -60,7 +60,7 @@ class GrocerTest {
     }
 
     @Test
-    public void GrocerShouldReturnCorrectValueForTwoDifferentItemsInOrder() {
+    public void grocerShouldReturnCorrectValueForTwoDifferentItemsInOrder() {
         //given
         String arguments = "AB";
         //when
@@ -70,7 +70,7 @@ class GrocerTest {
     }
 
     @Test
-    public void GrocerShouldReturnCorrectValueForManyItemsInOrder() {
+    public void grocerShouldReturnCorrectValueForManyItemsInOrder() {
         //given
         String arguments = "ABCDABA";
         //when
