@@ -13,6 +13,7 @@ public class Grocer {
     public double getTotalPrice(String order) {
         double totalPrice;
 
+        if (Objects.isNull(order)) throw new  NullPointerException();
         if (order.isEmpty()) return 0.0;
 
         Map<Item, Long> map = new HashMap<>();

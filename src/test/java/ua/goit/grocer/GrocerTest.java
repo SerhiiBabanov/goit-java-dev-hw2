@@ -28,6 +28,15 @@ class GrocerTest {
         //then
         assertEquals(0, result);
     }
+    @Test
+    public void grocerMustTrowNullPointerExceptionForNullOrder() {
+        //given
+        String arguments = null;
+        //when
+        Executable result = () -> grocer.getTotalPrice(arguments);
+        //then
+        assertThrows(NullPointerException.class, result);
+    }
 
     @Test
     public void grocerShouldReturnCorrectValueForOneItemInOrder() {
